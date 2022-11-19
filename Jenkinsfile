@@ -13,6 +13,6 @@ node{
     
     
     stage('Build Docker Image'){
-        sh 'docker build -t dockerhandson/java-web-app .'
+        sh 'docker build -t hackcse/ajithdocker .'
     }
 }
