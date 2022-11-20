@@ -1,3 +1,3 @@
 FROM tomcat:latest
 # Dummy text to test 
-COPY target/hackcse/docker.war /usr/local/tomcat/webapps/.war
+COPY target/ajithdocker*.war /usr/local/tomcat/webapps/ajithdocker.war
