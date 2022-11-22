@@ -8,13 +8,13 @@ node{
       sh "${mavenCMD} clean package"
     }
       stage('Build Docker Image'){
-        sh 'docker build -t hackcse/dockerajith .'
+        sh 'docker build -t hackcse/docker .'
     }
        stage('Push Docker Image'){
         withCredentials([string(credentialsId: 'Dockerhub', variable: 'Dockerhub')]) {
           sh "docker login -u hackcse -p ${Dockerhub}"
         }
-        sh 'docker push hackcse/ajithdocker'
+        sh 'docker push hackcse/docker'
      }
 }    
     
